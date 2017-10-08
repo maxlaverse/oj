@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.3.9 - 2017-10-09
+
+  - Changed default parse error from EncodingError to Oj::ParseError.
+
 ## 3.3.8 - 2017-10-04
 
   - Fixed Rail mimic precision bug.
