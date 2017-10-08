@@ -1577,8 +1577,8 @@ Init_oj() {
     oj_parse_error_class = rb_const_get_at(Oj, rb_intern("ParseError"));
     oj_stringio_class = rb_const_get(rb_cObject, rb_intern("StringIO"));
     oj_struct_class = rb_const_get(rb_cObject, rb_intern("Struct"));
-    oj_json_parser_error_class = oj_parse_error_class;    // replaced if mimic is called
-    oj_json_generator_error_class = oj_parse_error_class; // replaced if mimic is called
+    oj_json_parser_error_class = oj_parse_error_class;  // replaced if mimic is called
+    oj_json_generator_error_class = rb_eEncodingError;  // replaced if mimic is called
 
     allow_blank_sym = ID2SYM(rb_intern("allow_blank"));		rb_gc_register_address(&allow_blank_sym);
     allow_gc_sym = ID2SYM(rb_intern("allow_gc"));		rb_gc_register_address(&allow_gc_sym);
